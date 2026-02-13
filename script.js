@@ -4,7 +4,7 @@ const messageBox = document.getElementById("message");
 
 // Liste des messages
 const messages = [
-  "for the prettiest boy ever",
+  "for the prettiest one ever",
   "you are so precious",
   "Thank you for being so good, so sweet, so kind"
 ];
@@ -47,3 +47,4 @@ btn.addEventListener("click", () => {
 
   garden.appendChild(flower);
 });
+
