@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  background-color: #b8e994; /* light grass green */
+  image-rendering: pixelated;
+  overflow: hidden;
+  font-family: monospace;
+  color: white;
+}
+
+#message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 22px;
+  text-align: center;
+  z-index: 10;
+  pointer-events: none;
+  text-shadow: 0 0 4px black;
+  opacity: 0;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+#bloomBtn {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 20;
+}
+
+#garden {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.flower {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  image-rendering: pixelated;
+  transform: translate(-50%, -50%) scale(0);
+  animation: pixelPop 0.4s steps(3) forwards;
+}
+
+
+
+@keyframes pixelPop {
+  0% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
+  50% { transform: translate(-50%, -50%) scale(3); opacity: 1; }
+  100% { transform: translate(-50%, -50%) scale(2); opacity: 1; }
+}
